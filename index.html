@@ -29,9 +29,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginmodal">
-                        <span class="fa fa-sign-in"></span> Login</a>
-                    </a>
+                    <a id="loginbutton"><span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
@@ -85,9 +83,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#reservemodal">
-                       <button class="btn btn-warning btn-block" data-target="#reservemodal">Reserve Table</button>
-                    </a>
+                    <a id="reservebutton"><button class="btn btn-warning btn-block">Reserve Table</button></a>
                 </div>
             </div>
         </div>
@@ -135,7 +131,7 @@
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="section">Section</label>
-                            <div class="btn-group btn-group-toggle col-sm-10" data-toggle="buttons">
+                            <div class="btn-group btn-group-toggle col-sm-4" data-toggle="buttons">
                                 <label class="btn btn-success active">
                                     <input type="radio" name="section" id="section1" autocomplete="off" checked> Non-Smoking
                                 </label>
@@ -309,23 +305,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#mycarousel').carousel({interval:2000});
-            $('#carouselbutton').click(function(){
-                if ($('#carouselbutton').children('span').hasClass('fa-pause')){
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselbutton').children('span').removeClass('fa-pause');
-                    $('#carouselbutton').children('span').addClass('fa-play');
-                }
-                else{
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselbutton').children('span').removeClass('fa-play');
-                    $('#carouselbutton').children('span').addClass('fa-pause');
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
